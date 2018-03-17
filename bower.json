@@ -1,0 +1,33 @@
+{
+  "name": "framemamer",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "The WorkingClass Hacker Himself"
+  ],
+  "license": "Beerware",
+  "keywords": [
+    "mainframe",
+    "cobol",
+    "transpiler"
+  ],
+  "homepage": "https://github.com/drcircuit/framemamer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": ["dist/**/bootstrap.min.js", "dist/**/bootstrap.min.css"]
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "angular": "^1.6.9"
+  }
+}
