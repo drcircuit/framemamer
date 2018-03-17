@@ -1,0 +1,6 @@
+# 1 "C:\Users\espen\source\repos\framemamer\uploads\f9898a9d8ed644299734a48ccff5e812"  
+       Identification    division.
+       Program-id. hello.
+       procedure division.
+            display "Hello world!".
+            stop run.

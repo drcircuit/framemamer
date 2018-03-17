@@ -1,0 +1,9 @@
+node_modules
+bower_components
+upload
+transpile
+npm-debug.log
+.gulp-scss-cache
+.vscode
+.gitignore
+.git

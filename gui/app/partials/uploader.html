@@ -1,0 +1,66 @@
+<div class="py-5">
+    <div class="row m-b-1">
+        <div class="col-sm-6 offset-sm-3">
+            <button type="button" class="btn btn-primary btn-block" onclick="document.getElementById('inputFile').click()">Upload COBOL source code</button>
+            <div class="form-group inputDnD">
+                <label class="sr-only" for="inputFile">File Upload</label>
+                <input upload-handler type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" data-title="Drag and drop a file">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div ng-if="file" class="highlight">
+        <strong class="text-info">
+            <div class="row  m-b-1">
+                <div class="col-md-6">
+                    <div class="col-sm-6 offset-sm-2">
+                        <i class="fas fa-save"></i> Cobol source
+                    </div>
+
+                    <div class="col-sm-4 offset-sm-2">
+                        <a class="btn-info btn" ng-if="file.resource && !waiting" href="{{file.resource}}/zip">
+                            <i class="fas fa-download"></i> Download Java Source</a>
+                    </div>
+                    <code source="file.source" title="{{file.name}}" resource="{{file.resource}}"></code>
+                </div>
+            </div>
+        </strong>
+
+
+    </div>
+
+</div>
+<div class="py-5" ng-show="waiting">
+    <div class="text-center">
+        <p>
+            <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+        </p>
+        <p>Loading...</p>
+    </div>
+</div>
+
+<div ng-show="!waiting && transpiled">
+    <div class="py-5">
+        <div class="highlight row m-b-1">
+            <div ng-if="transpiled.dataClasses.length > 0" class="col-md-6">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-2">
+                        <strong class="text-info">
+                            <i class="fas fa-cube"></i> Data Java Classes</strong>
+                    </div>
+                </div>
+                <code ng-repeat="dc in transpiled.dataClasses" source="dc.dataHtml" title="{{dc.file}}" pkg="{{dc.pkg}}"></code>
+            </div>
+            <div ng-if="transpiled.programClasses.length > 0" class="col-md-6">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-2">
+                        <strong class="text-info">
+                            <i class="fas fa-coffee"></i> Program Java Classes</strong>
+                    </div>
+                </div>
+                <code ng-repeat="pc in transpiled.programClasses" source="pc.dataHtml" title="{{pc.file}}" pkg="{{pc.pkg}}"></code>
+            </div>
+        </div>
+    </div>
+</div>
