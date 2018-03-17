@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mameframer">
 <head>
     <meta charset="UTF-8">
     <title>FrameMamer</title>
@@ -12,9 +12,11 @@
     <!-- My stuff! -->
     <!-- inject:css -->
     <!-- endinject -->
+    <base href="/">
 </head>
 <body>
     <h1>Let's Mame some Frames!</h1>
+    <ng-view></ng-view>
     <!-- inject:js -->
     <!-- endinject -->
 </body>

@@ -1,0 +1,2 @@
+angular.module('allpartials', []).run(['$templateCache', function($templateCache) {$templateCache.put('partials/banner.html','<h2>There is a banner here...</h2>');
+$templateCache.put('partials/home.html','<h1>Welcome to the matrix</h1>');}]);

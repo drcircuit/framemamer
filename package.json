@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,12 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.2.0",
+    "gulp-angular-templates": "0.0.2",
     "gulp-bower": "0.0.14",
     "gulp-inject": "^4.3.1",
-    "gulp-main-bower-files": "^1.6.2"
+    "gulp-main-bower-files": "^1.6.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
   }
 }
