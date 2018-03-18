@@ -3,7 +3,7 @@ const bp = require("body-parser");
 const c = require("chalk");
 const app = express();
 const api = require("./api/api")(require("./storage/inmemoryrepo"));
-const port = process.argv.PORT || process.env.PORT || 3000;
+const port = process.argv.PORT || process.env.PORT || 80;
 
 app.use(bp.urlencoded({extended: false}));
 app.use(bp.json());

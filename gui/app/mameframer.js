@@ -4,7 +4,7 @@ angular.module("mameframer", ["ngRoute", "allpartials"])
             upload: function (file, callback) {
                 var fd = new FormData();
                 fd.append("source", file);
-                $http.post("http://localhost:3000/programs", fd, {
+                $http.post("/programs", fd, {
                     transformRequest: angular.identity,
                     headers: { 'Content-Type': undefined }
                 })
